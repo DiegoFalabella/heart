@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ciclo da dirofilariose</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #FFFFFF; overflow: hidden; }
+  #anim { position: absolute; inset: 0; }
+  #anim svg { display: block; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="anim" role="img" aria-label="Infográfico animado: ciclo da dirofilariose. Estágio 1, infecção do mosquito: ao picar um cão infectado, o mosquito ingere microfilárias (formas larvais iniciais) do verme Dirofilaria immitis. Dentro do mosquito, elas se desenvolvem até atingir a fase infectante (L3). Estágio 2, transmissão ao cão: ao picar outro cão, o mosquito deposita as larvas infectantes (L3) na superfície da pele. Elas penetram pelo local da picada e começam a se desenvolver nos tecidos do animal. Estágio 3, migração pelo organismo: as larvas passam por diferentes fases de desenvolvimento nos tecidos, alcançam a circulação e migram em direção às artérias pulmonares e ao coração. Estágio 4, desenvolvimento dos vermes adultos: nas artérias pulmonares e, em infecções mais intensas, no lado direito do coração, os vermes amadurecem e se tornam adultos. Os parasitas se reproduzem, liberando microfilárias na corrente sanguínea. Quando outro mosquito pica o animal infectado, ingere essas formas larvais e reinicia o ciclo. Fonte: médico veterinário Luiz Sofal."></div>
+<p class="sr">Infográfico animado: ciclo da dirofilariose. Estágio 1, infecção do mosquito: ao picar um cão infectado, o mosquito ingere microfilárias (formas larvais iniciais) do verme Dirofilaria immitis. Dentro do mosquito, elas se desenvolvem até atingir a fase infectante (L3). Estágio 2, transmissão ao cão: ao picar outro cão, o mosquito deposita as larvas infectantes (L3) na superfície da pele. Elas penetram pelo local da picada e começam a se desenvolver nos tecidos do animal. Estágio 3, migração pelo organismo: as larvas passam por diferentes fases de desenvolvimento nos tecidos, alcançam a circulação e migram em direção às artérias pulmonares e ao coração. Estágio 4, desenvolvimento dos vermes adultos: nas artérias pulmonares e, em infecções mais intensas, no lado direito do coração, os vermes amadurecem e se tornam adultos. Os parasitas se reproduzem, liberando microfilárias na corrente sanguínea. Quando outro mosquito pica o animal infectado, ingere essas formas larvais e reinicia o ciclo. Fonte: médico veterinário Luiz Sofal.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie_svg.min.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("anim");
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var anim = lottie.loadAnimation({
+    container: el, renderer: "svg", loop: true, autoplay: false,
+    path: "../lottie/dirofilariose-ciclo.json",
+    rendererSettings: { preserveAspectRatio: "xMidYMid meet" }
+  });
+  if (reduce) {
+    anim.addEventListener("DOMLoaded", function () { anim.goToAndStop(640, true); });
+    return;
+  }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? anim.play() : anim.pause(); });
+    }, { threshold: 0.2 }).observe(el);
+  } else {
+    anim.play();
+  }
+})();
+</script>
+</body>
+</html>

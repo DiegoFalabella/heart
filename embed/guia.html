@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Verme do coração: o que os tutores precisam saber</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #FFFFFF; overflow: hidden; }
+  #anim { position: absolute; inset: 0; }
+  #anim svg { display: block; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="anim" role="img" aria-label="Infográfico animado: verme do coração, o que os tutores precisam saber. O que é? A dirofilariose é uma doença causada pelo parasita Dirofilaria immitis, transmitido pela picada de mosquitos infectados. Nos cães, pode atingir as artérias pulmonares e o coração. Quais são os sinais? A doença pode evoluir sem sintomas no início. Entre os sinais estão: tosse; cansaço e intolerância ao exercício; dificuldade para respirar; perda de peso; acúmulo de líquido no abdômen, em casos avançados. Como diagnosticar? O diagnóstico pode envolver: teste de antígeno no sangue; pesquisa de microfilárias; radiografia do tórax; ecocardiograma, quando indicado. Como prevenir? Mantenha a prevenção durante todo o ano, conforme orientação veterinária; faça os testes periódicos recomendados; reduza a exposição do cão a mosquitos; elimine focos de água parada."></div>
+<p class="sr">Infográfico animado: verme do coração, o que os tutores precisam saber. O que é? A dirofilariose é uma doença causada pelo parasita Dirofilaria immitis, transmitido pela picada de mosquitos infectados. Nos cães, pode atingir as artérias pulmonares e o coração. Quais são os sinais? A doença pode evoluir sem sintomas no início. Entre os sinais estão: tosse; cansaço e intolerância ao exercício; dificuldade para respirar; perda de peso; acúmulo de líquido no abdômen, em casos avançados. Como diagnosticar? O diagnóstico pode envolver: teste de antígeno no sangue; pesquisa de microfilárias; radiografia do tórax; ecocardiograma, quando indicado. Como prevenir? Mantenha a prevenção durante todo o ano, conforme orientação veterinária; faça os testes periódicos recomendados; reduza a exposição do cão a mosquitos; elimine focos de água parada.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie_svg.min.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("anim");
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var anim = lottie.loadAnimation({
+    container: el, renderer: "svg", loop: true, autoplay: false,
+    path: "../lottie/dirofilariose-guia.json",
+    rendererSettings: { preserveAspectRatio: "xMidYMid meet" }
+  });
+  if (reduce) {
+    anim.addEventListener("DOMLoaded", function () { anim.goToAndStop(660, true); });
+    return;
+  }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? anim.play() : anim.pause(); });
+    }, { threshold: 0.2 }).observe(el);
+  } else {
+    anim.play();
+  }
+})();
+</script>
+</body>
+</html>
